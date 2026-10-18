@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欠揍助手| 深度欠揍 | 焦梓睿&deep欠揍制作</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <button class="new-chat-btn" id="newChatBtn">＋ 新对话</button>
+            <div class="chat-list" id="chatList"></div>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-nav">
+                <div class="nav-pages">
+                    <button class="nav-item active" data-page="chat">对话</button>
+                    <button class="nav-item" data-page="about">关于</button>
+                    <button class="nav-item" data-page="help">帮助</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+
+            <div class="page active" id="page-chat">
+                <div class="chat-area" id="chatArea"></div>
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="输入问题 / 数学表达式 / 中英翻译..." autocomplete="off" />
+                    <button id="sendBtn" aria-label="发送">➤</button>
+                </div>
+            </div>
+
+            <div class="page" id="page-about">
+                <div class="page-title">关于欠揍助手</div>
+                <div class="info-card">
+                    <strong>欠揍助手</strong> 是一个纯前端助手：<br><br>
+                    由焦梓睿和deep欠揍制作，提供以下功能：<br><br>
+                    数学计算（实数/复数/积分/极限/级数/欧拉公式）<br>
+                    中英互译（含中英混搭）<br>
+                    本地知识库（算法、编程、历史、生物、各学科常识，已接入你的数据库）<br><br>
+                    对话自动保存到浏览器缓存，刷新不丢失。
+                </div>
+            </div>
+
+            <div class="page" id="page-help">
+                <div class="page-title">使用帮助</div>
+                <div class="info-card">
+                    <strong>数学</strong>：<code>2+3*4</code>、<code>sin(pi/2)</code>、<code>∫(x^2,0,1)</code><br><br>
+                    <strong>翻译</strong>：<code>apple 什么意思</code>、<code>苹果 英语怎么说</code><br><br>
+                    <strong>知识库</strong>：直接输入概念名，如「什么是二分查找」「一次函数图像性质」「不合逻辑类病句辨析」
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="knowledge-base.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
